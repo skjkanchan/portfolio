@@ -1,0 +1,32 @@
+/* Design tokens: all styling goes through these variables. Replaced in the design pass. */
+:root {
+  --color-text: #1a1a1a;
+  --color-background: #ffffff;
+  --color-link: #0b57d0;
+  --color-focus: #0b57d0;
+  --font-family-base: system-ui, sans-serif;
+  --space-page: 1rem;
+  --width-content: 48rem;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  background: var(--color-background);
+  font-family: var(--font-family-base);
+}
+
+#root {
+  max-width: var(--width-content);
+  margin: 0 auto;
+  padding: var(--space-page);
+}
+
+a {
+  color: var(--color-link);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
