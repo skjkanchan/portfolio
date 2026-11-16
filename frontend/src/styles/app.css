@@ -1,0 +1,215 @@
+/* Interim design styles. Use tokens from tokens.css only: no raw values here. */
+
+/* Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-page);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-base);
+  overflow-wrap: break-word;
+}
+
+#root {
+  max-width: var(--width-page);
+  margin-inline: auto;
+  padding-inline: var(--space-page-inline);
+}
+
+h1,
+h2 {
+  margin-block: 0 var(--space-md);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+h1 {
+  font-size: var(--font-size-display);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+p {
+  margin-block: 0 var(--space-md);
+}
+
+a {
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: var(--focus-width) solid var(--color-accent);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--radius-sm);
+}
+
+/* An empty string, not "none": Safari drops list semantics with "none". */
+.site-nav__list,
+.card-grid,
+.pill-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: '';
+}
+
+/* Header and navigation */
+.site-header {
+  padding-block: var(--space-lg);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.site-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-inline: calc(var(--space-sm) * -1);
+}
+
+.site-nav__link {
+  display: block;
+  padding: var(--space-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+}
+
+.site-nav__link:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+.site-nav__link[aria-current='page'] {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* Page */
+.site-main {
+  padding-block: var(--space-section);
+}
+
+.lead {
+  max-width: var(--width-text);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.meta {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.meta::first-letter {
+  text-transform: uppercase;
+}
+
+/* Experience cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--width-card-min)), 1fr)
+  );
+  gap: var(--space-lg);
+  margin-block-start: var(--space-xl);
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  padding: var(--space-lg);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--duration-fast) ease;
+}
+
+.card__title {
+  margin-block-end: var(--space-sm);
+  font-size: var(--font-size-lg);
+}
+
+.card__link {
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color var(--duration-fast) ease;
+}
+
+/* Stretches the title's click area over the whole card. */
+.card__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-md);
+}
+
+.card__link:focus-visible {
+  outline: none;
+}
+
+.card__link:focus-visible::after {
+  outline: var(--focus-width) solid var(--color-accent);
+  outline-offset: var(--focus-offset);
+}
+
+.card__summary {
+  margin-block-end: 0;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .card:hover .card__link {
+    color: var(--color-accent-hover);
+  }
+}
+
+/* Experience detail */
+.detail {
+  max-width: var(--width-text);
+}
+
+.detail__section {
+  margin-block-start: var(--space-xl);
+}
+
+.detail__similar {
+  margin-block-start: var(--space-section);
+  padding-block-start: var(--space-xl);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+.detail__back {
+  margin-block: var(--space-xl) 0;
+}
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.pill {
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-muted);
+  font-size: var(--font-size-sm);
+}
+
+.link-list {
+  margin: 0;
+  padding-inline-start: var(--space-lg);
+}

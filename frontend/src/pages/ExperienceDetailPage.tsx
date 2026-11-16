@@ -11,39 +11,46 @@ export default function ExperienceDetailPage() {
   }
 
   return (
-    <article>
+    <article className="detail">
       <h1>{entry.title}</h1>
-      <p>
+      <p className="meta">
         {entry.type} · <time dateTime={entry.date}>{entry.date}</time> · Scale{' '}
         {entry.scale} of 5
       </p>
-      <p>{entry.summary}</p>
+      <p className="lead">{entry.summary}</p>
 
-      <h2>Skills</h2>
-      <ul>
-        {entry.skills.map((skill) => (
-          <li key={skill}>{skill}</li>
-        ))}
-      </ul>
+      <section className="detail__section">
+        <h2>Skills</h2>
+        <ul className="pill-list">
+          {entry.skills.map((skill) => (
+            <li key={skill} className="pill">
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {entry.links.length > 0 && (
-        <>
+        <section className="detail__section">
           <h2>Links</h2>
-          <ul>
+          <ul className="link-list">
             {entry.links.map((link) => (
               <li key={link}>
                 <a href={link}>{link}</a>
               </li>
             ))}
           </ul>
-        </>
+        </section>
       )}
 
-      <section aria-labelledby="similar-experiences-heading">
+      <section
+        className="detail__similar"
+        aria-labelledby="similar-experiences-heading"
+      >
         <h2 id="similar-experiences-heading">Similar experiences</h2>
       </section>
 
-      <p>
+      <p className="detail__back">
         <Link to="/experiences">Back to all experiences</Link>
       </p>
     </article>
