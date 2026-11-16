@@ -5,7 +5,7 @@ export default function ExperienceListPage() {
   return (
     <>
       <h1>Experiences</h1>
-      <ul>
+      <ul className="card-grid">
         {getEntries().map((entry) => (
           <li key={entry.id}>
             <ExperienceCard entry={entry} />

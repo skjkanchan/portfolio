@@ -60,6 +60,7 @@ Pipeline diagram, design decisions, cost breakdown, and evaluation:
 
 ## Frontend & design
 - The visual design and hand-made assets are my own work. Until the design pass, build only a **minimal, unstyled placeholder UI**.
+- **Approved interim exception:** a simple, token-based interim design (`frontend/src/styles/`) is in place until my design pass replaces it. Do not extend it into a final design.
 - Separate logic from presentation: hooks/services (`useSearch`, `useChat`, `useVisitorType`, `useRelated`) vs. presentational components.
 - All styling through design tokens (CSS variables) in one place. No decorative styling or generated visual assets.
 - Placeholder images live in `/frontend/src/assets/placeholder/`.

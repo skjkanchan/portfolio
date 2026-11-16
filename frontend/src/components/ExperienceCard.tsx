@@ -7,14 +7,16 @@ interface ExperienceCardProps {
 
 export default function ExperienceCard({ entry }: ExperienceCardProps) {
   return (
-    <article>
-      <h2>
-        <Link to={`/experiences/${entry.id}`}>{entry.title}</Link>
+    <article className="card">
+      <h2 className="card__title">
+        <Link to={`/experiences/${entry.id}`} className="card__link">
+          {entry.title}
+        </Link>
       </h2>
-      <p>
+      <p className="meta">
         {entry.type} · <time dateTime={entry.date}>{entry.date}</time>
       </p>
-      <p>{entry.summary}</p>
+      <p className="card__summary">{entry.summary}</p>
     </article>
   )
 }
