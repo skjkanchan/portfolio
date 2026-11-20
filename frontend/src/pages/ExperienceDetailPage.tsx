@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import DateRange from '../components/DateRange'
 import { getEntryById } from '../services/entries'
 import NotFoundPage from './NotFoundPage'
 
@@ -14,8 +15,14 @@ export default function ExperienceDetailPage() {
     <article className="detail">
       <h1>{entry.title}</h1>
       <p className="meta">
-        {entry.type} · <time dateTime={entry.date}>{entry.date}</time> · Scale{' '}
-        {entry.scale} of 5
+        {entry.type}
+        {entry.start && (
+          <>
+            {' · '}
+            <DateRange start={entry.start} end={entry.end} />
+          </>
+        )}
+        {' · '}Scale {entry.scale} of 5
       </p>
       <p className="lead">{entry.summary}</p>
 
@@ -35,8 +42,8 @@ export default function ExperienceDetailPage() {
           <h2>Links</h2>
           <ul className="link-list">
             {entry.links.map((link) => (
-              <li key={link}>
-                <a href={link}>{link}</a>
+              <li key={link.url}>
+                <a href={link.url}>{link.label}</a>
               </li>
             ))}
           </ul>
