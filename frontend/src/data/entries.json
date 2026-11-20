@@ -1,0 +1,150 @@
+[
+  {
+    "id": "cornell-ai-4-cities-lab",
+    "title": "Software Engineer, Cornell AI 4 Cities Lab",
+    "type": "experience",
+    "start": "2026-09",
+    "end": "present",
+    "scale": 3,
+    "skills": [
+      "MCP",
+      "Agentic AI",
+      "Geospatial data",
+      "DAG workflows"
+    ],
+    "summary": "Software engineer on the Urban AI Automation Team, building tools that let AI agents analyze NYC Open Data geospatial datasets.",
+    "links": [],
+    "body": "- Developing MCP server letting AI agents analyze NYC Open Data geospatial datasets, targeting 10+ indicators under 20 min.\n- Building DAG-based workflow engine that validates and runs agent-authored tool-call pipelines with parallel execution.\n- Implementing replay from content-hashed data extracts so researchers can reproduce past results and detect data drift."
+  },
+  {
+    "id": "goldman-sachs-internship",
+    "title": "Software Engineer Intern, Goldman Sachs",
+    "type": "experience",
+    "start": "2026-06",
+    "end": "2026-08",
+    "scale": 4,
+    "skills": [
+      "Python",
+      "Agentic AI",
+      "AWS S3",
+      "Evals",
+      "Human-in-the-loop review",
+      "Data engineering"
+    ],
+    "summary": "Data Engineering internship building an agentic data-discovery pipeline that automates vendor data curation and publication to the firm's data marketplace, cutting turnaround time from 3+ days to 20 minutes.",
+    "links": [],
+    "body": "- Developed agentic data-discovery pipeline that automates vendor data curation and publication to the firm's data marketplace, cutting turnaround time from 3+ days to 20 minutes.\n- Built agentic skill for dataset metadata generation, and Python tag-matching algorithm, 98% faster execution than manual process.\n- Wrote Python scripts to make classification and tag-matching deterministic, added human-in-the-loop review before publishing via API, and wrote 18 evals that passed before rollout.\n- Onboarded vendor data into firm's lakehouse via AWS S3 pipeline; extended it to support .gz for expanded ingestion coverage."
+  },
+  {
+    "id": "walmart-internship",
+    "title": "Software Engineer Intern, Walmart Global Tech",
+    "type": "experience",
+    "start": "2025-06",
+    "end": "2025-08",
+    "scale": 4,
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "JUnit",
+      "Jest",
+      "Docker",
+      "Kubernetes"
+    ],
+    "summary": "Implemented search filtering for a compliance portal, cutting search time from 5+ minutes to under 5 seconds across 600+ compliance rules.",
+    "links": [],
+    "body": "- Implemented search filtering for compliance portal, cutting search time from 5+ mins to <5s across 600+ compliance rules.\n- Developed Java algorithm that dynamically filters 600+ rules across 8+ parameters while synchronizing results with search queries, and built Spring Boot API endpoint with PostgreSQL to fetch rules by service tag.\n- Created reusable React/TypeScript UI filtering components powering rule search for 20+ business users.\n- Implemented unit, integration, and E2E tests (JUnit, Spring Test, Jest); deployed with Kubernetes and Docker."
+  },
+  {
+    "id": "acm-utd-director-of-projects",
+    "title": "Director of Projects, ACM UTD",
+    "type": "leadership",
+    "start": "2024-11",
+    "end": "2025-12",
+    "scale": 5,
+    "skills": [
+      "Leadership",
+      "Mentoring",
+      "Program management"
+    ],
+    "summary": "Ran the 10-week project program for ACM UTD, the largest CS organization at UTD (800+ members), coaching 11 project team leads and guiding 50+ students.",
+    "links": [],
+    "body": "- Ran ACM's 10-week project program: coached 11 project team leads and guided 50+ students through workshops and project development sessions; worked with mentors from CBRE, JPMC, Amazon."
+  },
+  {
+    "id": "acm-utd-project-manager",
+    "title": "Project Manager, ACM UTD",
+    "type": "leadership",
+    "start": "2023-12",
+    "end": "2024-11",
+    "scale": 3,
+    "skills": [
+      "Project management",
+      "Sprint planning",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "AWS"
+    ],
+    "summary": "Led 2 teams of 4 developers through the full software development lifecycle at ACM UTD, running sprint planning and weekly standups to ship full-stack applications.",
+    "links": [],
+    "body": "- Directly led 2 teams of 4 developers through the full software development lifecycle, running sprint planning and weekly standups to ship full-stack applications (React, Node, MongoDB, AWS).\n- Promoted to Director of Projects."
+  },
+  {
+    "id": "flight-delay-risk-model",
+    "title": "Cascading Flight-Delay Risk Model",
+    "type": "project",
+    "scale": 2,
+    "skills": [
+      "Python",
+      "PyTorch",
+      "Pandas",
+      "Feature engineering",
+      "Data fusion"
+    ],
+    "summary": "Cascading-delay risk model for DFW airport, presented to American Airlines as 1 of 6 finalists among 30 teams in the American Airlines Data Challenge.",
+    "links": [],
+    "body": "- Built a cascading-delay risk identification model specialized to DFW airport, presented to AA as 1 of 6 finalists among 30 teams.\n- Performed data fusion across multi-source aviation data (flight, weather, and atmospheric datasets), reconciling mismatched time granularities and join keys into a unified training set.\n- Engineered 40+ features to train 4-layer PyTorch neural network flagging flights at high risk of propagating delays with 0.65 F1."
+  },
+  {
+    "id": "insyte",
+    "title": "Insyte",
+    "type": "project",
+    "scale": 2,
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Flask",
+      "Python",
+      "AWS Lambda",
+      "AWS DynamoDB",
+      "Claude",
+      "OpenAI",
+      "LangGraph"
+    ],
+    "summary": "Full-stack multi-agent property search platform built for the CBRE HackUTD Challenge, turning natural language queries into mapped properties and insights.",
+    "links": [],
+    "body": "- Architected full-stack multi-agent property search platform for CBRE HackUTD Challenge so property managers can turn natural language queries into mapped properties and insights across 90+ properties in under 10s.\n- Leveraged LLM agents for query parsing and filter selection, and Python property matching with 92% accuracy over 50 queries."
+  },
+  {
+    "id": "utd-capstone-disaster-damage-assessment",
+    "title": "UTD Capstone: Disaster Damage Assessment",
+    "type": "project",
+    "scale": 2,
+    "skills": [
+      "Python",
+      "LLaVA",
+      "Vision-language models",
+      "React",
+      "Mapbox",
+      "AWS S3",
+      "OpenAI"
+    ],
+    "summary": "Led development of a vision-language model pipeline on a team of 6 to classify property-level damage severity from satellite images, with a map dashboard and a chatbot grounded in the damage data.",
+    "links": [],
+    "body": "- Led development of VLM pipeline (LLaVA 1.5-7B, Python) to classify property-level damage severity across 4000+ buildings from 68 satellite images on a team of 6, achieving 60.3% accuracy against FEMA ground-truth labels.\n- Built React.js/Mapbox dashboard rendering building-level damage heatmaps over pre/post disaster imagery from AWS S3.\n- Built OpenAI chatbot grounded in VLM damage data, responding to queries in chat and with live map actions/navigation."
+  }
+]

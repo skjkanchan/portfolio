@@ -27,7 +27,7 @@ With fewer than 100 entries, a vector database adds cost and complexity without 
 
 ### 1. Similar experiences (content-based recommendation)
 - Embeddings + cosine similarity, precomputed offline
-- **MMR re-ranking** for diversity, mixing entry types (project / internship / leadership)
+- **MMR re-ranking** for diversity, mixing entry types (project / experience / leadership)
 - **Novelty penalty** for entries the visitor has already viewed (client-side)
 - **Progression ordering** (e.g., hackathon → project → internship) using a scale/date field
 - Short "why related" label per pair (e.g., "Same skills, at production scale"), generated once offline
@@ -55,7 +55,9 @@ Pipeline diagram, design decisions, cost breakdown, and evaluation:
 
 ## Content
 - One Markdown file per experience in `content/entries/`, with frontmatter:
-  `id, title, type (project | internship | leadership | other), date, scale (1–5), skills[], summary, links[]`
+  `id, title, type (project | experience | leadership | other), start + end (YYYY-MM, end may be `present`; not for projects), scale (1–5), skills[], summary, links[] ({label, url})`
+- An optional Markdown body below the frontmatter holds details for the ML features.
+- `pipeline/build_entries.py` validates entries and writes `frontend/src/data/entries.json` (committed, since Vercel doesn't run Python). Field rules and the scale rubric are in `content/README.md`.
 - All content is written by me. Never generate or embellish facts about my experience.
 
 ## Frontend & design
